@@ -1,0 +1,40 @@
+{
+  "name": "twaese",
+  "version": "1.0.0",
+  "description": "Text mangler optimized for tweets",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development webpack-dev-server --open --hot --mode development",
+    "build": "NODE_ENV=production webpack --progress --hide-modules --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freaktechnik/twaese.git"
+  },
+  "author": "Martin Giger (https://humanoids.be)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freaktechnik/twaese/issues"
+  },
+  "homepage": "https://github.com/freaktechnik/twaese#readme",
+  "private": true,
+  "dependencies": {
+    "semantic-ui-vue": "^0.4.1",
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "semantic-ui-css": "^2.4.0",
+    "vue-loader": "^15.4.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.20.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
