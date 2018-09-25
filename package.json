@@ -36,5 +36,11 @@
     "webpack": "^4.20.1",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.9"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead",
+    "Firefox ESR"
+  ]
 }

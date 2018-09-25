@@ -19,7 +19,17 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                options: {
+                    presets: [
+                        [
+                            '@babel/preset-env',
+                            {
+                                modules: false
+                            }
+                        ]
+                    ]
+                }
             },
             {
                 test: /\.(png|jpg|gif|svg|ttf|woff2?|eot|otf)$/,
@@ -45,6 +55,7 @@ module.exports = {
         }
     },
     devServer: {
+        publicPath: '/twaese/dist/',
         historyApiFallback: true,
         noInfo: true,
         overlay: true

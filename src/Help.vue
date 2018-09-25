@@ -1,5 +1,5 @@
 <template>
-    <sui-modal @changed="hideHelp" :open="open">
+    <sui-modal @changed="hideModal" :open="open">
         <sui-modal-header>Help</sui-modal-header>
         <sui-modal-content>
             <p>This site is redundant. Just so you know it.</p>
@@ -12,7 +12,7 @@
             <p>© 2018 by Martin Giger.</p>
         </sui-modal-content>
         <sui-modal-actions>
-            <sui-button positive @click="hideHelp">Close</sui-button>
+            <sui-button positive @click="hideModal">Close</sui-button>
         </sui-modal-actions>
     </sui-modal>
 </template>
