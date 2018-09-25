@@ -1,5 +1,5 @@
 <template>
-    <sui-modal @changed="hideHelp" :open="modal">
+    <sui-modal @changed="hideHelp" :open="open">
         <sui-modal-header>Help</sui-modal-header>
         <sui-modal-content>
             <p>This site is redundant. Just so you know it.</p>
@@ -8,6 +8,7 @@
             <p>If you're not happy with the result, you can re-run the generator by clicking "Try again". You can adjust your text and the settings.</p>
             <p>The generator also works for texts longer than a tweet, it will just not be tweetable afterward.</p>
             <p>"Twäse" is an amalgamation of "Tweet" and the German word for cheese, "Käse", since this word punches holes into your text.</p>
+            <p>Source code is available on <a href="https://github.com/freaktechnik/twaese">GitHub</a> and is licensed under the MIT.</p>
             <p>© 2018 by Martin Giger.</p>
         </sui-modal-content>
         <sui-modal-actions>
