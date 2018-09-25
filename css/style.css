@@ -1,0 +1,167 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: white;
+	font-size: 15px;
+	font-family: sans-serif;
+}
+
+#slider {
+    width: 100%;
+}
+
+#backg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 5;
+}
+
+#shadow {
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	padding: 1em;
+	z-index: 6;
+}
+
+#container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 6;
+}
+
+#container div{
+	width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 35px;
+	padding: 1em;
+	font-size: 15px;
+	text-align: center;
+	z-index: 7;
+}
+
+#proc {
+	font-size: 20px;
+}
+
+#wrapper {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+	width: 350px;
+	background: gold;
+	padding: 1em;
+}
+
+#blubb {
+	width: 100%;
+}
+
+#counter {
+	font-size: 20px;
+	color: black;
+	margin-top: -20px;
+	text-align: right;
+}
+
+#tweet {
+	height: 60px;
+	width: 345px;
+	resize: vertical;
+	
+	box-shadow: inset 0 0 3px black;
+	-moz-box-shadow: inset 0 0 3px black;
+	-webkit-box-shadow: inset 0 0 3px black;
+	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	
+	border: none;
+	
+	padding: 2.5px;
+	margin-bottom: .5em;
+}
+
+#errort {
+	margin-bottom: .5em;
+}
+
+#proctw {
+	background: white;
+	display: block;
+	
+	box-shadow: inset 0 0 3px black;
+	-moz-box-shadow: inset 0 0 3px black;
+	-webkit-box-shadow: inset 0 0 3px black;
+	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	
+	border: none;
+	
+	padding: 2.5px;
+	margin-bottom: .5em;
+}
+
+#replacment {
+	margin-bottom: .5em;
+}
+
+#ownstring {
+	box-shadow: inset 0 0 3px black;
+	-moz-box-shadow: inset 0 0 3px black;
+	-webkit-box-shadow: inset 0 0 3px black;
+	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	
+	border: none;
+	
+	padding: 2.5px;
+}
+
+.bigb {
+	margin-top: 5px;
+	width: 100%;
+	background: white;
+	color: black;
+	padding: 0.5em;
+	font-size: 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 3px black;
+	-moz-box-shadow: 0 0 3px black;
+	-webkit-box-shadow: 0 0 3px black;
+	border: none;
+}
+
+.bigb:active {
+	background:DodgerBlue;
+	color: white;
+	box-shadow: inset 0 0 3px black;
+	-moz-box-shadow: inset 0 0 3px black;
+	-webkit-box-shadow: inset 0 0 3px black;
+}
+
+#title {
+	text-align: center;
+}
+
+#back {
+	float: right;
+	margin-top: -45px;
+}
