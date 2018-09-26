@@ -118,3 +118,9 @@ main {
     max-width: 450px;
 }
 </style>
+<style>
+@viewport {
+    min-width: device-width;
+    zoom: 100%;
+}
+</style>
