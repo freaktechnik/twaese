@@ -1,21 +1,49 @@
 <template>
-    <main id="app" is="sui-grid" centered verticalAlign="middle">
+    <main
+        id="app"
+        is="sui-grid"
+        centered
+        vertical-align="middle">
         <div class="column">
             <sui-segment class="left aligned">
-                <twaese-header hashtag="twäse"></twaese-header>
-                <sui-form v-if="!generated" @submit.prevent="generate">
-                    <twaese-input :max-length="maxLength" label="Your text:" :value="text" @change="setText"></twaese-input>
-                    <settings v-if="settingsVisible" :replace-words="settings.replaceWords" :probability="settings.probability" :mode="settings.mode" :custom-replacement="settings.customReplacement" :fill-words="settings.fillWords" @update="updateSettings"></settings>
-                    <toolbar :settings-visible="settingsVisible" @toggle="toggleSettings" @help="showHelp" @clear="clear"></toolbar>
-                    <sui-button primary size="massive" fluid type="submit">Cheese!</sui-button>
+                <twaese-header hashtag="twäse"/>
+                <sui-form
+                    v-if="!generated"
+                    @submit.prevent="generate">
+                    <twaese-input
+                        :max-length="maxLength"
+                        label="Your text:"
+                        :value="text"
+                        @change="setText"/>
+                    <settings
+                        v-if="settingsVisible"
+                        :replace-words="settings.replaceWords"
+                        :probability="settings.probability"
+                        :mode="settings.mode"
+                        :custom-replacement="settings.customReplacement"
+                        :fill-words="settings.fillWords"
+                        @update="updateSettings"/>
+                    <toolbar
+                        :settings-visible="settingsVisible"
+                        @toggle="toggleSettings"
+                        @help="showHelp"
+                        @clear="clear"/>
+                    <sui-button
+                        primary
+                        size="massive"
+                        fluid
+                        type="submit">Cheese!</sui-button>
                 </sui-form>
                 <section v-else>
-                    <sui-button icon="undo" @click="back">Try again</sui-button>
-                    <result>{{ modifiedText }}</result>
-                    <a :href="tweetUrl" is="sui-button" :disabled="!canTweet" social="twitter" icon="twitter" size="massive" primary fluid @click="tweet">Tweet!</a>
+                    <sui-button
+                        icon="undo"
+                        @click="back">Try again</sui-button>
+                    <result-panel :text="modifiedText"/>
                 </section>
             </sui-segment>
-            <help @hide="hideHelp" :open="modal"></help>
+            <help
+                @hide="hideHelp"
+                :open="modal"/>
         </div>
     </main>
 </template>
@@ -26,18 +54,19 @@ import Header from './Header.vue';
 import Input from './Input.vue';
 import Settings from './Settings.vue';
 import Toolbar from './Toolbar.vue';
-import Result from './Result.vue';
+import ResultPanel from './ResultPanel.vue';
 import Help from './Help.vue';
 import processText from './process-text';
+import twitter from 'twitter-text';
 
 export default {
-    name: 'app',
+    name: 'App',
     components: {
         "twaese-header": Header,
         "twaese-input": Input,
         settings: Settings,
         toolbar: Toolbar,
-        result: Result,
+        "result-panel": ResultPanel,
         help: Help
     },
     data() {
@@ -52,7 +81,7 @@ export default {
                 customReplacement: '',
                 fillWords: false
             },
-            maxLength: 240,
+            maxLength: twitter.configs.defaults.maxWeightedTweetLength,
             showSettings: false,
             modal: false
         };
@@ -78,7 +107,7 @@ export default {
         toggleSettings() {
             this.showSettings = !this.showSettings;
         },
-        generate(e) {
+        generate() {
             this.modifiedText = processText({
                 text: this.text,
                 replaceWords: this.settings.replaceWords,
@@ -114,7 +143,7 @@ main {
     height: 100%;
 }
 
-.column {
+main > .column {
     max-width: 450px;
 }
 </style>

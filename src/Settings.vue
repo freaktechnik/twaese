@@ -1,37 +1,73 @@
 <template>
-    <sui-form-fields :inline="false" grouped>
+    <sui-form-fields
+        :inline="false"
+        grouped>
         <h2 is="sui-header">Options</h2>
         <sui-form-field>
             <label>Replacement type</label>
             <sui-button-group>
-                <sui-button type="button" v-for="modeName in modes" toggle :active="mode === modeName" :key="modeName" :value="modes[modeName]" @click="setMode">{{ modeName }}</sui-button>
+                <sui-button
+                    type="button"
+                    v-for="modeName in modes"
+                    toggle
+                    :active="mode === modeName"
+                    :key="modeName"
+                    :value="modes[modeName]"
+                    @click="setMode">{{ modeName }}</sui-button>
             </sui-button-group>
         </sui-form-field>
         <sui-form-field v-if="mode === modes.CUSTOM">
             <label>Replace with</label>
-            <sui-input placeholder="Custom replacement" :value="customReplacement" @input.native="setReplacement" :required="mode === modes.CUSTOM" min-length="1"></sui-input>
+            <sui-input
+                placeholder="Custom replacement"
+                :value="customReplacement"
+                @input.native="setReplacement"
+                :required="mode === modes.CUSTOM"
+                min-length="1"/>
         </sui-form-field>
         <sui-form-field>
             <label>Replacement probability</label>
-            <input type="range" min="0" max="100" step="1" :value="percentage" @input="setProbability">
+            <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                :value="percentage"
+                @input="setProbability">
             <sui-label>{{ percentage }}%</sui-label>
         </sui-form-field>
         <sui-form-field>
             <label>Replace</label>
             <sui-button-group>
-                <sui-button type="button" toggle :active="replaceWords" @click="setReplaceWords">Words</sui-button>
-                <sui-button-or></sui-button-or>
-                <sui-button type="button" toggle :active="!replaceWords" @click="setReplaceLetters">Letters</sui-button>
+                <sui-button
+                    type="button"
+                    toggle
+                    :active="replaceWords"
+                    @click="setReplaceWords">Words</sui-button>
+                <sui-button-or/>
+                <sui-button
+                    type="button"
+                    toggle
+                    :active="!replaceWords"
+                    @click="setReplaceLetters">Letters</sui-button>
             </sui-button-group>
         </sui-form-field>
         <sui-form-field>
-            <sui-checkbox label="Fill words" :input-value="actuallyFillWords" :disabled="!canFillWords" @input="setFillWords"></sui-checkbox>
+            <sui-checkbox
+                label="Fill words"
+                :input-value="actuallyFillWords"
+                :disabled="!canFillWords"
+                @input="setFillWords"/>
         </sui-form-field>
     </sui-form-fields>
 </template>
 
 <script>
 import modes from './constants/modes';
+
+const PERCENT = 100,
+    NONE = 0,
+    ALL = 1;
 
 export default {
     name: 'Settings',
@@ -43,7 +79,7 @@ export default {
         probability: {
             type: Number,
             default: 0.2,
-            validator: (v) => v >= 0 && v <= 1
+            validator: (v) => v >= NONE && v <= ALL
         },
         mode: {
             type: String,
@@ -66,7 +102,7 @@ export default {
     },
     computed: {
         percentage() {
-            return Math.floor(this.probability * 100);
+            return Math.floor(this.probability * PERCENT);
         },
         canFillWords() {
             return this.mode !== modes.CENSOR && this.replaceWords;
@@ -93,7 +129,7 @@ export default {
         },
         setProbability(e) {
             this.update({
-                probability: e.target.valueAsNumber / 100
+                probability: e.target.valueAsNumber / PERCENT
             });
         },
         setReplaceWords() {

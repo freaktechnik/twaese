@@ -1,6 +1,8 @@
 <template>
-    <blockquote is="sui-segment" raised>
-        <slot></slot>
+    <blockquote
+        is="sui-segment"
+        raised>
+        <slot/>
     </blockquote>
 </template>
 
@@ -13,5 +15,7 @@ export default {
 <style scoped>
 blockquote {
     word-wrap: break-word;
+    hyphens: auto;
+    white-space: pre-wrap;
 }
 </style>

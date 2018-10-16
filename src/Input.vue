@@ -1,20 +1,29 @@
 <template>
     <sui-form-field>
         <label>{{ label }}</label>
-        <sui-label attached="top right" :color="labelColor">{{ remaining }}</sui-label>
-        <textarea @input="setValue" required :value="value" placeholder="Your cheesy text goes here..."></textarea>
+        <sui-label
+            attached="top right"
+            :color="labelColor">{{ remaining }}</sui-label>
+        <textarea
+            @input="setValue"
+            required
+            :value="value"
+            placeholder="Your cheesy text goes here..."/>
     </sui-form-field>
 </template>
 
 <script>
-//TODO use twitter-text for length calc?
+import twitter from 'twitter-text';
+
+const EMPTY = 0;
+
 export default {
     name: 'Input',
     props: {
         maxLength: {
             type: Number,
-            default: 280,
-            validator: (v) => v > 0
+            default: twitter.configs.defaults.maxWeightedTweetLength,
+            validator: (v) => v > EMPTY
         },
         label: {
             type: String,
@@ -27,10 +36,11 @@ export default {
     },
     computed: {
         remaining() {
-            return this.maxLength - this.value.length;
+            const parsedTweet = twitter.parseTweet(this.value);
+            return this.maxLength - parsedTweet.weightedLength;
         },
         labelColor() {
-            if(this.remaining < 0) {
+            if(this.remaining < EMPTY) {
                 return "red";
             }
         }
@@ -46,5 +56,9 @@ export default {
 <style scoped>
 .label-container {
     position: relative;
+}
+
+textarea {
+    hyphens: auto;
 }
 </style>
