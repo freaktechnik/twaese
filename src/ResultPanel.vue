@@ -18,6 +18,7 @@
                     <sui-button
                         icon="clipboard"
                         size="massive"
+                        title="Copy to clipboard"
                         @click="copy"/>
                 </sui-grid-column>
             </sui-grid-row>
