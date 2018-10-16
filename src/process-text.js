@@ -19,7 +19,7 @@ const START = 0,
         if(!Array.isArray(replacementOptions)) {
             return replacementOptions;
         }
-        return replacementOptions[getRandomInt(START, replacementOptions.length)];
+        return replacementOptions[getRandomInt(START, replacementOptions.length - NEXT)];
     };
 
 export default ({
