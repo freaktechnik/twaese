@@ -2,7 +2,8 @@
     <header>
         <h1
             is="sui-header"
-            text-align="center">
+            text-align="center"
+        >
             <img src="../40px-Cheese.png">
             <a :href="hashtagUrl">#{{ hashtag }}</a>
         </h1>

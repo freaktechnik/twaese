@@ -3,12 +3,16 @@
         <label>{{ label }}</label>
         <sui-label
             attached="top right"
-            :color="labelColor">{{ remaining }}</sui-label>
+            :color="labelColor"
+        >
+            {{ remaining }}
+        </sui-label>
         <textarea
             @input="setValue"
             required
             :value="value"
-            placeholder="Your cheesy text goes here..."/>
+            placeholder="Your cheesy text goes here..."
+        />
     </sui-form-field>
 </template>
 
@@ -43,6 +47,7 @@ export default {
             if(this.remaining < EMPTY) {
                 return "red";
             }
+            return '';
         }
     },
     methods: {

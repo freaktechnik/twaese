@@ -1,8 +1,9 @@
 <template>
     <blockquote
         is="sui-segment"
-        raised>
-        <slot/>
+        raised
+    >
+        <slot />
     </blockquote>
 </template>
 

@@ -1,6 +1,8 @@
 <template>
     <div>
-        <result ref="result">{{ text }}</result>
+        <result ref="result">
+            {{ text }}
+        </result>
         <sui-grid class="equal width">
             <sui-grid-row>
                 <sui-grid-column>
@@ -12,14 +14,16 @@
                         icon="twitter"
                         size="massive"
                         primary
-                        fluid>Tweet!</a>
+                        fluid
+                    >Tweet!</a>
                 </sui-grid-column>
                 <sui-grid-column width="1">
                     <sui-button
                         icon="clipboard"
                         size="massive"
                         title="Copy to clipboard"
-                        @click="copy"/>
+                        @click="copy"
+                    />
                 </sui-grid-column>
             </sui-grid-row>
         </sui-grid>

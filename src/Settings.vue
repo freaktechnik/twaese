@@ -1,8 +1,11 @@
 <template>
     <sui-form-fields
         :inline="false"
-        grouped>
-        <h2 is="sui-header">Options</h2>
+        grouped
+    >
+        <h2 is="sui-header">
+            Options
+        </h2>
         <sui-form-field>
             <label>Replacement type</label>
             <sui-button-group>
@@ -13,7 +16,10 @@
                     :active="mode === modeName"
                     :key="modeName"
                     :value="modes[modeName]"
-                    @click="setMode">{{ modeName }}</sui-button>
+                    @click="setMode"
+                >
+                    {{ modeName }}
+                </sui-button>
             </sui-button-group>
         </sui-form-field>
         <sui-form-field v-if="mode === modes.CUSTOM">
@@ -23,7 +29,8 @@
                 :value="customReplacement"
                 @input.native="setReplacement"
                 :required="mode === modes.CUSTOM"
-                min-length="1"/>
+                min-length="1"
+            />
         </sui-form-field>
         <sui-form-field>
             <label>Replacement probability</label>
@@ -33,7 +40,8 @@
                 max="100"
                 step="1"
                 :value="percentage"
-                @input="setProbability">
+                @input="setProbability"
+            >
             <sui-label>{{ percentage }}%</sui-label>
         </sui-form-field>
         <sui-form-field>
@@ -43,13 +51,19 @@
                     type="button"
                     toggle
                     :active="replaceWords"
-                    @click="setReplaceWords">Words</sui-button>
-                <sui-button-or/>
+                    @click="setReplaceWords"
+                >
+                    Words
+                </sui-button>
+                <sui-button-or />
                 <sui-button
                     type="button"
                     toggle
                     :active="!replaceWords"
-                    @click="setReplaceLetters">Letters</sui-button>
+                    @click="setReplaceLetters"
+                >
+                    Letters
+                </sui-button>
             </sui-button-group>
         </sui-form-field>
         <sui-form-field>
@@ -57,7 +71,8 @@
                 label="Fill words"
                 :input-value="actuallyFillWords"
                 :disabled="!canFillWords"
-                @input="setFillWords"/>
+                @input="setFillWords"
+            />
         </sui-form-field>
     </sui-form-fields>
 </template>

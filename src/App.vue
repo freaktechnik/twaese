@@ -3,18 +3,21 @@
         id="app"
         is="sui-grid"
         centered
-        vertical-align="middle">
+        vertical-align="middle"
+    >
         <div class="column">
             <sui-segment class="left aligned">
-                <twaese-header hashtag="twäse"/>
+                <twaese-header hashtag="twäse" />
                 <sui-form
                     v-if="!generated"
-                    @submit.prevent="generate">
+                    @submit.prevent="generate"
+                >
                     <twaese-input
                         :max-length="maxLength"
                         label="Your text:"
                         :value="text"
-                        @change="setText"/>
+                        @change="setText"
+                    />
                     <settings
                         v-if="settingsVisible"
                         :replace-words="settings.replaceWords"
@@ -22,28 +25,37 @@
                         :mode="settings.mode"
                         :custom-replacement="settings.customReplacement"
                         :fill-words="settings.fillWords"
-                        @update="updateSettings"/>
+                        @update="updateSettings"
+                    />
                     <toolbar
                         :settings-visible="settingsVisible"
                         @toggle="toggleSettings"
                         @help="showHelp"
-                        @clear="clear"/>
+                        @clear="clear"
+                    />
                     <sui-button
                         primary
                         size="massive"
                         fluid
-                        type="submit">Cheese!</sui-button>
+                        type="submit"
+                    >
+                        Cheese!
+                    </sui-button>
                 </sui-form>
                 <section v-else>
                     <sui-button
                         icon="undo"
-                        @click="back">Try again</sui-button>
-                    <result-panel :text="modifiedText"/>
+                        @click="back"
+                    >
+                        Try again
+                    </sui-button>
+                    <result-panel :text="modifiedText" />
                 </section>
             </sui-segment>
             <help
                 @hide="hideHelp"
-                :open="modal"/>
+                :open="modal"
+            />
         </div>
     </main>
 </template>

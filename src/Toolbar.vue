@@ -5,15 +5,20 @@
                 type="button"
                 :toggle="settingsVisible"
                 @click="toggleSettings"
-                :icon="settingsIcon">{{ settingsLabel }}</sui-button>
+                :icon="settingsIcon"
+            >
+                {{ settingsLabel }}
+            </sui-button>
             <sui-button
                 type="button"
                 icon="trash"
-                @click="clear"/>
+                @click="clear"
+            />
             <sui-button
                 type="button"
                 icon="question circle"
-                @click="showHelp"/>
+                @click="showHelp"
+            />
         </sui-button-group>
     </sui-form-field>
 </template>
