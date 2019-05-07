@@ -10,14 +10,16 @@
                 {{ settingsLabel }}
             </sui-button>
             <sui-button
-                type="button"
+                type="reset"
                 icon="trash"
                 @click="clear"
+                title="Clear"
             />
             <sui-button
                 type="button"
                 icon="question circle"
                 @click="showHelp"
+                title="Help"
             />
         </sui-button-group>
     </sui-form-field>
