@@ -30,7 +30,7 @@
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@freaktechnik/eslint-config-babel": "^6.6.2",
-    "@freaktechnik/eslint-config-vue": "^6.6.3",
+    "@freaktechnik/eslint-config-vue": "^7.0.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^3.0.0",
     "eclint": "^2.8.1",
