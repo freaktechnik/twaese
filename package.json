@@ -22,7 +22,7 @@
   "homepage": "https://github.com/freaktechnik/twaese#readme",
   "private": true,
   "dependencies": {
-    "semantic-ui-vue": "^0.9.1",
+    "semantic-ui-vue": "^0.10.1",
     "twitter-text": "^3.0.1",
     "vue": "^2.6.11"
   },
