@@ -127,24 +127,24 @@ export default {
         }
     },
     methods: {
-        setMode(e) {
+        setMode(event) {
             this.update({
-                mode: e.target.value
+                mode: event.target.value
             });
         },
-        setReplacement(e) {
+        setReplacement(event) {
             this.update({
-                customReplacement: e.target.value
+                customReplacement: event.target.value
             });
         },
-        setFillWords(e) {
+        setFillWords(event) {
             this.update({
-                fillWords: e.target.checked
+                fillWords: event.target.checked
             });
         },
-        setProbability(e) {
+        setProbability(event) {
             this.update({
-                probability: e.target.valueAsNumber / PERCENT
+                probability: event.target.valueAsNumber / PERCENT
             });
         },
         setReplaceWords() {

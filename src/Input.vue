@@ -51,8 +51,8 @@ export default {
         }
     },
     methods: {
-        setValue(e) {
-            this.$emit("change", e.target.value);
+        setValue(event) {
+            this.$emit("change", event.target.value);
         }
     }
 };
