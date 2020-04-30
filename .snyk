@@ -1,0 +1,50 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - '@babel/core > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - eclint > lodash:
+        patched: '2020-04-30T18:00:10.377Z'
+    - eslint > lodash:
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@babel/preset-env > @babel/types > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - eslint > table > lodash:
+        patched: '2020-04-30T18:00:10.377Z'
+    - webpack-dev-server > http-proxy-middleware > lodash:
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@babel/preset-env > @babel/plugin-transform-classes > @babel/helper-define-map > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@freaktechnik/eslint-config-babel > babel-eslint > @babel/traverse > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - eclint > gulp-reporter > junit-report-builder > lodash:
+        patched: '2020-04-30T18:00:10.377Z'
+    - webpack-dev-server > portfinder > async > lodash:
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@babel/preset-env > @babel/plugin-transform-classes > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@freaktechnik/eslint-config-babel > babel-eslint > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@babel/preset-env > @babel/preset-modules > @babel/plugin-transform-dotall-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-regex > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@freaktechnik/eslint-config-babel > babel-eslint > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@freaktechnik/eslint-config-babel > babel-eslint > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - eslint > inquirer > lodash:
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@freaktechnik/eslint-config-vue > @freaktechnik/eslint-config-webpack > eslint-import-resolver-webpack > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@freaktechnik/eslint-config-vue > eslint-plugin-vue > vue-eslint-parser > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
+    - '@freaktechnik/eslint-config-vue > @freaktechnik/eslint-config-browser > @freaktechnik/eslint-config-base > eslint-plugin-jsdoc > lodash':
+        patched: '2020-04-30T18:00:10.377Z'
