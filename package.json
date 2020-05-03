@@ -35,7 +35,7 @@
     "@freaktechnik/eslint-config-babel": "^7.1.0",
     "@freaktechnik/eslint-config-vue": "^7.1.0",
     "babel-loader": "^8.1.0",
-    "css-loader": "^3.5.2",
+    "css-loader": "^3.5.3",
     "eclint": "^2.8.1",
     "eslint": "^6.8.0",
     "file-loader": "^5.1.0",
