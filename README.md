@@ -1,7 +1,5 @@
 # ![](40px-Cheese.png) #twäse
 
-[![Build Status](https://travis-ci.com/freaktechnik/twaese.svg?branch=master)](https://travis-ci.com/freaktechnik/twaese)
-
 Text generator that removes or replaces randomly chosen words or letters in your text.
 
 Built to mangle tweets, but works with any text.
