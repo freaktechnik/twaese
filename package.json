@@ -7,8 +7,8 @@
     "lint:ec": "eclint check $(git ls-files)",
     "lint": "npm run lint:js && npm run lint:ec",
     "test": "npm run lint",
-    "dev": "NODE_ENV=development webpack-dev-server --open --hot --mode development",
-    "build": "NODE_ENV=production webpack --progress --hide-modules --mode production"
+    "dev": "NODE_ENV=development webpack serve --open --hot --mode development",
+    "build": "NODE_ENV=production webpack --progress --mode production"
   },
   "repository": {
     "type": "git",
@@ -32,17 +32,16 @@
     "@freaktechnik/eslint-config-babel": "^8.0.2",
     "@freaktechnik/eslint-config-vue": "^8.0.2",
     "babel-loader": "^8.1.0",
-    "css-loader": "^3.6.0",
+    "css-loader": "^5.0.2",
     "eclint": "^2.8.1",
     "eslint": "^7.19.0",
-    "file-loader": "^6.0.0",
-    "mini-css-extract-plugin": "^0.9.0",
+    "mini-css-extract-plugin": "^1.3.6",
     "semantic-ui-css": "^2.4.1",
     "vue-loader": "^15.9.3",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.0"
   },
   "browserslist": [

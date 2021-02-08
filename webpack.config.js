@@ -1,3 +1,4 @@
+/* eslint-disable filenames/match-regex */
 const path = require('path');
 const webpack = require('webpack');
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
@@ -33,10 +34,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|svg|ttf|woff2?|eot|otf)$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]?[hash]'
-                }
+                type: 'asset/resource'
             },
             {
                 test: /\.css$/,
@@ -44,11 +42,16 @@ module.exports = {
                     process.env.NODE_ENV !== 'production'
                         ? 'vue-style-loader'
                         : MiniCssExtractPlugin.loader,
-                    'css-loader'
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            esModule: process.env.NODE_ENV !== 'production'
+                        }
+                    }
                 ]
             }
         ]
-        },
+    },
     resolve: {
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
@@ -68,7 +71,13 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'style.css'
         })
-    ]
+    ],
+    cache: {
+        type: 'filesystem',
+        buildDependencies: {
+            config: [ __filename ]
+        }
+    }
 };
 
 if(process.env.NODE_ENV === 'production') {

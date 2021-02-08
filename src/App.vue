@@ -160,6 +160,7 @@ main > .column {
 }
 </style>
 <style>
+@import url('semantic-ui-css/semantic.min.css');
 @viewport {
     min-width: device-width;
     zoom: 100%;
