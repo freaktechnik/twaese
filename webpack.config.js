@@ -1,7 +1,7 @@
 /* eslint-disable filenames/match-regex */
 const path = require('path');
 const webpack = require('webpack');
-const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const { VueLoaderPlugin } = require("vue-loader");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
