@@ -34,7 +34,7 @@
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "eclint": "^2.8.1",
-    "eslint": "^7.32.0",
+    "eslint": "^8.5.0",
     "mini-css-extract-plugin": "^2.4.5",
     "semantic-ui-css": "^2.4.1",
     "vue-loader": "^15.9.8",
