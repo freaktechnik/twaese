@@ -12,7 +12,7 @@
 
 <script>
 export default {
-    name: 'Header',
+    name: 'TwaeseHeader',
     props: {
         hashtag: {
             type: String,

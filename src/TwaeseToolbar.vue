@@ -27,7 +27,7 @@
 
 <script>
 export default {
-    name: 'Toolbar',
+    name: 'TwaeseToolbar',
     props: {
         settingsVisible: {
             type: Boolean,

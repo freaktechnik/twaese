@@ -85,7 +85,7 @@ const PERCENT = 100,
     ALL = 1;
 
 export default {
-    name: 'Settings',
+    name: 'TwaeseSettings',
     props: {
         replaceWords: {
             type: Boolean,

@@ -1,8 +1,8 @@
 <template>
     <div>
-        <result ref="result">
+        <twaese-result ref="result">
             {{ text }}
-        </result>
+        </twaese-result>
         <sui-grid class="equal width">
             <sui-grid-row>
                 <sui-grid-column>
@@ -30,13 +30,13 @@
     </div>
 </template>
 <script>
-import Result from './Result.vue';
+import TwaeseResult from './TwaeseResult.vue';
 import twitter from 'twitter-text';
 
 export default {
     name: 'ResultPanel',
     components: {
-        "result": Result
+        "twaese-result": TwaeseResult
     },
     props: {
         text: {

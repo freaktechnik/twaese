@@ -22,7 +22,7 @@ import twitter from 'twitter-text';
 const EMPTY = 0;
 
 export default {
-    name: 'Input',
+    name: 'TwaeseInput',
     props: {
         maxLength: {
             type: Number,

@@ -18,7 +18,7 @@
                         :value="text"
                         @change="setText"
                     />
-                    <settings
+                    <twaese-settings
                         v-if="settingsVisible"
                         :replace-words="settings.replaceWords"
                         :probability="settings.probability"
@@ -27,7 +27,7 @@
                         :fill-words="settings.fillWords"
                         @update="updateSettings"
                     />
-                    <toolbar
+                    <twaese-toolbar
                         :settings-visible="settingsVisible"
                         @toggle="toggleSettings"
                         @help="showHelp"
@@ -52,7 +52,7 @@
                     <result-panel :text="modifiedText" />
                 </section>
             </sui-segment>
-            <help
+            <help-popup
                 @hide="hideHelp"
                 :open="modal"
             />
@@ -62,24 +62,24 @@
 
 <script>
 import modes from './constants/modes';
-import Header from './Header.vue';
-import Input from './Input.vue';
-import Settings from './Settings.vue';
-import Toolbar from './Toolbar.vue';
+import TwaeseHeader from './TwaeseHeader.vue';
+import TwaeseInput from './TwaeseInput.vue';
+import TwaeseSettings from './TwaeseSettings.vue';
+import TwaeseToolbar from './TwaeseToolbar.vue';
 import ResultPanel from './ResultPanel.vue';
-import Help from './Help.vue';
+import HelpPopup from './HelpPopup.vue';
 import processText from './process-text';
 import twitter from 'twitter-text';
 
 export default {
     name: 'App',
     components: {
-        "twaese-header": Header,
-        "twaese-input": Input,
-        settings: Settings,
-        toolbar: Toolbar,
+        "twaese-header": TwaeseHeader,
+        "twaese-input": TwaeseInput,
+        "twaese-settings": TwaeseSettings,
+        "twaese-toolbar": TwaeseToolbar,
         "result-panel": ResultPanel,
-        help: Help
+        "help-popup": HelpPopup
     },
     data() {
         return {
