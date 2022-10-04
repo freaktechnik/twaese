@@ -27,7 +27,7 @@
     "vue": "^2.7.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.1",
+    "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.3",
     "@freaktechnik/eslint-config-babel": "^9.0.0",
     "@freaktechnik/eslint-config-vue": "^9.0.0",
