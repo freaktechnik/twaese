@@ -34,7 +34,7 @@
     "babel-loader": "^9.1.2",
     "css-loader": "^6.8.1",
     "eclint": "^2.8.1",
-    "eslint": "^8.42.0",
+    "eslint": "^8.43.0",
     "eslint-plugin-optimize-regex": "^1.2.1",
     "mini-css-extract-plugin": "^2.7.6",
     "semantic-ui-css": "^2.5.0",
