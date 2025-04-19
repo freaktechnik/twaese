@@ -43,7 +43,7 @@
     "vue-template-compiler": "^2.7.16",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "webpack-dev-server": "^5.2.1"
   },
   "browserslist": [
     "last 2 versions",
