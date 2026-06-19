@@ -27,11 +27,11 @@
     "vue": "^2.7.15"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.4",
-    "@babel/preset-env": "^7.28.3",
-    "@freaktechnik/eslint-config-babel": "^10.2.0",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
+    "@freaktechnik/eslint-config-babel": "^13.0.0",
     "@freaktechnik/eslint-config-vue": "^9.2.1",
-    "babel-loader": "^10.0.0",
+    "babel-loader": "^10.1.1",
     "css-loader": "^7.1.1",
     "eclint": "^2.8.1",
     "eslint": "^9.37.0",
@@ -43,7 +43,7 @@
     "vue-template-compiler": "^2.7.16",
     "webpack": "^5.105.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.2.4"
+    "webpack-dev-server": "^5.2.5"
   },
   "browserslist": [
     "last 2 versions",
